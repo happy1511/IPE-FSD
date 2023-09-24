@@ -82,7 +82,7 @@ const StockDetail = () => {
                 <td>
                   {data.ssq < data.spq
                     ? "Invested"
-                    : (Number(data.ssq) * (Number(data.spp) - Number(data.ssp))).toString()}
+                    : ((Number(data.ssq) * (Number(data.ssp) - Number(data.spp)))<0?<span style={{color:'red'}}>{(Number(data.ssq) * (Number(data.ssp) - Number(data.spp)))}</span>:<span style={{color:'green'}}>{(Number(data.ssq) * (Number(data.ssp) - Number(data.spp)))}</span>)}
                 </td>
               </tr>
             );
